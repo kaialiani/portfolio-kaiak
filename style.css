@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500;600;700&display=swap");
+
+body {
+  background-color: #ffffff;
+
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+* {
+  font-family: "Sora", sans-serif;
+}
+
+p {
+  font-weight: 300;
+  line-height: 26px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.cards-container {
+  width: 100%;
+  height: 98vh;
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  height: 30rem;
+  width: 18rem;
+  background-color: #2f1c54;
+  border-radius: 20px;
+  box-shadow: -2px 4px 10px 0px rgba(53, 53, 53, 0.203);
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.card:not(:first-child) {
+  margin-right: -40px;
+}
+
+.foofest {
+  background-image: url(pics/foofest-cover.svg);
+  background-size: cover;
+}
+
+.capanna {
+  background-image: url(pics/capanna-cover.svg);
+  background-size: cover;
+}
+
+.klimakampen {
+  background-image: url(pics/klimakampen-cover.svg);
+  background-size: cover;
+}
+
+.edc {
+  background-image: url(pics/edc-card.svg);
+  background-size: cover;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+  position: relative;
+  left: -40px;
+  transition: 0.4s ease-out;
+}
+
+.title {
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.circle {
+  position: absolute;
+  left: 14rem;
+  top: 26rem;
+  fill: none;
+}
+
+.stroke {
+  stroke: white;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  transition: 0.4s ease-out;
+}
+
+svg {
+  stroke-width: 5px;
+}
+
+.card:hover .stroke {
+  stroke-dashoffset: 0;
+  transition: 1.8s ease-out;
+}
+
+.foo-stroke {
+  stroke: #262626;
+}
+
+.logo {
+  position: fixed;
+  left: 5vw;
+  top: 48vh;
+}
+
+.logo img {
+  width: 4rem;
+}
+
+.project-description {
+  margin-top: 25vh;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+  margin-bottom: 25vh;
+}
+
+.last-pic {
+  margin-right: 12rem;
+}
+
+@font-face {
+  font-family: "FiveSerifRegular";
+  src: url("/fonts/FiveSerif-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "FiveSerifItalic";
+  src: url("/fonts/FiveSerif-Italic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "FiveSerifLightItalic";
+  src: url("/fonts/FiveSerif-LightItalic.otf") format("opentype");
+}
+
+/* foofest */
+
+.foo-image-container {
+  display: flex;
+  overflow-x: auto;
+  width: 80vw;
+  gap: 4rem;
+  -webkit-overflow-scrolling: touch;
+
+  /* Add scrollbar styling for webkit browsers */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #888 #f0f0f0; /* Firefox */
+  padding-bottom: 2rem;
+
+  /* For webkit browsers (Chrome, Safari) */
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+    border: 3px solid #f0f0f0;
+  }
+}
+
+.foo-image-container img {
+  height: 90vh;
+}
+
+.foo-title {
+  font-family: "FiveSerifItalic";
+  font-size: 52px;
+  margin: 0;
+}
+
+/* old stuff */
+
+#programs-container {
+  display: flex;
+  gap: 3rem;
+}
+
+.next {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: black;
+
+  cursor: pointer;
+}
+
+.html {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #d65923;
+
+  cursor: pointer;
+}
+
+.css {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #1b73ba;
+
+  cursor: pointer;
+}
+
+.next > p,
+.supabase > p,
+.figma > p,
+.html > p,
+.css > p {
+  margin-block-start: 0.6em;
+  margin-block-end: 0.6em;
+}
+
+.supabase {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #36b87c;
+
+  cursor: pointer;
+}
+
+.figma {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #f24e1d;
+
+  cursor: pointer;
+}
+
+.website-link {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  cursor: pointer;
+}
+
+.website-link p {
+  background-color: #e0fe01d8;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  border-radius: 100px;
+}
+
+.website-link:hover {
+  text-decoration-color: #ff4037;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+figcaption {
+  margin-top: 0.8rem;
+  color: #0000008a;
+}
