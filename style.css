@@ -1,9 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500;600;700&display=swap");
 
+* {
+  font-family: "Sora", sans-serif;
+}
+
 body {
   background-color: #ffffff;
-
   margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  display: none;
+}
+
+.light {
+  color: white;
+}
+
+.dark {
+  color: #262626;
+}
+
+.serif {
+  font-family: "FiveSerifItalic";
+  font-size: 52px;
+  margin-left: 0.5rem;
+}
+
+.capanna-font {
+  font-family: "PublishGothicExpanded";
+  color: white;
 }
 
 a {
@@ -11,18 +39,30 @@ a {
   color: #000;
 }
 
-* {
-  font-family: "Sora", sans-serif;
-}
-
 p {
   font-weight: 300;
   line-height: 26px;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
+h1 {
+  font-size: 36px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.card {
+  border-radius: 22px;
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.card img {
+  width: auto;
+  box-shadow: -1px 2px 5px 0px rgba(97, 97, 97, 0.203);
+  border-radius: 22px;
+  position: relative;
+  width: 18vw;
 }
 
 .cards-container {
@@ -30,54 +70,36 @@ p {
   height: 98vh;
   align-items: center;
   display: flex;
+  gap: 1rem;
   flex-direction: row-reverse;
   justify-content: center;
 }
 
-.card {
+.last-card {
   display: flex;
-  height: 30rem;
-  width: 18rem;
   background-color: #2f1c54;
   border-radius: 20px;
   box-shadow: -2px 4px 10px 0px rgba(53, 53, 53, 0.203);
   transition: 0.4s ease-out;
-  position: relative;
-  left: 0px;
-}
-
-.card:not(:first-child) {
   margin-right: -40px;
+  position: relative;
+  left: 80px;
 }
 
-.foofest {
-  background-image: url(pics/foofest-cover.svg);
-  background-size: cover;
-}
-
-.capanna {
-  background-image: url(pics/capanna-cover.svg);
-  background-size: cover;
-}
-
-.klimakampen {
-  background-image: url(pics/klimakampen-cover.svg);
-  background-size: cover;
-}
-
-.edc {
-  background-image: url(pics/edc-card.svg);
-  background-size: cover;
+.last-card img {
+  width: auto;
+  box-shadow: -2px 4px 10px 0px rgba(53, 53, 53, 0.203);
+  border-radius: 20px;
+  position: relative;
 }
 
 .card:hover {
-  transform: translateY(-20px);
+  transform: translateY(-15px);
   transition: 0.4s ease-out;
 }
 
 .card:hover ~ .card {
   position: relative;
-  left: -40px;
   transition: 0.4s ease-out;
 }
 
@@ -90,9 +112,10 @@ p {
 }
 
 .circle {
+  fill: none;
   position: absolute;
-  left: 14rem;
-  top: 26rem;
+  left: 75%;
+  top: 85%;
   fill: none;
 }
 
@@ -118,7 +141,7 @@ svg {
 
 .logo {
   position: fixed;
-  left: 5vw;
+  left: 4vw;
   top: 48vh;
 }
 
@@ -154,6 +177,11 @@ svg {
   src: url("/fonts/FiveSerif-LightItalic.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "PublishGothicExpanded";
+  src: url("/fonts/PublishGothicExpanded-Regular.otf") format("opentype");
+}
+
 /* foofest */
 
 .foo-image-container {
@@ -174,17 +202,49 @@ svg {
   }
 
   &::-webkit-scrollbar-track {
-    background-color: #f0f0f0;
+    background-color: #f0f0f000;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #888;
+    background-color: #88888800;
     border-radius: 6px;
     border: 3px solid #f0f0f0;
   }
 }
 
 .foo-image-container img {
+  height: 90vh;
+}
+
+.capanna-image-container {
+  display: flex;
+  overflow-x: auto;
+  width: 80vw;
+  gap: 4rem;
+  -webkit-overflow-scrolling: touch;
+
+  /* Add scrollbar styling for webkit browsers */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #888 #f0f0f0; /* Firefox */
+  padding-bottom: 2rem;
+
+  /* For webkit browsers (Chrome, Safari) */
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #f0f0f000;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #88888800;
+    border-radius: 6px;
+    border: 3px solid #f0f0f0;
+  }
+}
+
+.capanna-image-container img {
   height: 90vh;
 }
 
@@ -285,4 +345,171 @@ svg {
 figcaption {
   margin-top: 0.8rem;
   color: #0000008a;
+}
+
+@media only screen and (min-width: 550px) and (max-width: 1024px) {
+  /* Styles specific to mobile screens */
+  .cards-container {
+    width: 90%;
+  }
+
+  .card img {
+    border-radius: 10px;
+  }
+
+  .logo {
+    position: fixed;
+    left: 3vw;
+    top: 48vh;
+  }
+
+  .logo img {
+    width: 2.8rem;
+  }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 880px) {
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    width: 70%;
+  }
+  .card img {
+    width: 100%;
+    border-radius: 22px;
+    position: relative;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 75%;
+    padding: 1.8rem;
+  }
+  .logo {
+    position: absolute;
+    top: 5%;
+    left: 45%;
+    z-index: 2;
+  }
+
+  .logo img {
+    width: 4rem;
+  }
+
+  body {
+    display: flex;
+    width: 100%;
+  }
+
+  .cards-container {
+    margin-top: 16vh;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  .card {
+    height: 40vh;
+    width: 90%;
+    border-radius: 20px;
+    transition: none;
+    outline-offset: -10px;
+  }
+
+  .card img {
+    display: none;
+  }
+
+  .foo {
+    background-color: #e1fe01;
+    outline: 2px solid rgb(0, 0, 0);
+  }
+
+  .capanna {
+    background-color: #e85935;
+    outline: 2px solid rgb(255, 255, 255);
+  }
+
+  .klimakampen {
+    background-color: #5da970;
+    outline: 2px solid rgb(255, 255, 255);
+  }
+
+  .edc {
+    background-color: #232050;
+    outline: 2px solid rgb(255, 255, 255);
+  }
+
+  .card:hover {
+    transform: none;
+    transition: none;
+  }
+
+  .last-card {
+    height: 40vh;
+    width: 100%;
+    background-color: #2f1c54;
+    border-radius: 20px;
+    box-shadow: -2px 4px 10px 0px rgba(53, 53, 53, 0.203);
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0;
+  }
+
+  .project-description {
+    margin-top: 18vh;
+    width: 88vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    margin-bottom: 25vh;
+  }
+
+  .foo-image-container {
+    display: flex;
+    overflow-x: auto;
+    width: 88vw;
+    gap: 3rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .foo-image-container img {
+    height: 60vh;
+  }
+
+  .capanna-image-container {
+    flex-direction: column;
+    width: 88vw;
+  }
+
+  .capanna-image-container img {
+    width: 88vw;
+    height: auto;
+  }
+
+  .project-description > h1 > img {
+    width: 80vw;
+  }
+
+  #programs-container {
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .next,
+  .figma,
+  .supabase {
+    gap: 0.6rem;
+  }
+  .content img {
+    z-index: 5;
+    display: block;
+    box-shadow: none;
+    border-radius: 0;
+    position: relative;
+    width: 10vw;
+  }
 }
