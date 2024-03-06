@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500;600;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
 * {
   font-family: "Sora", sans-serif;
 }
@@ -24,14 +25,17 @@ body {
 }
 
 .serif {
-  font-family: "FiveSerifItalic";
-  font-size: 52px;
+  font-family: "Lora", serif;
+  font-size: 42px;
   margin-left: 0.5rem;
+  font-style: italic;
+  font-weight: 400;
 }
 
 .capanna-font {
-  font-family: "PublishGothicExpanded";
+  font-family: "Anybody", sans-serif;
   color: white;
+  font-weight: 400;
 }
 
 a {
@@ -46,6 +50,11 @@ p {
 
 h1 {
   font-size: 36px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+h2 {
   margin-block-start: 0;
   margin-block-end: 0;
 }
@@ -162,26 +171,6 @@ svg {
   margin-right: 12rem;
 }
 
-@font-face {
-  font-family: "FiveSerifRegular";
-  src: url("/fonts/FiveSerif-Regular.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "FiveSerifItalic";
-  src: url("/fonts/FiveSerif-Italic.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "FiveSerifLightItalic";
-  src: url("/fonts/FiveSerif-LightItalic.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "PublishGothicExpanded";
-  src: url("/fonts/PublishGothicExpanded-Regular.otf") format("opentype");
-}
-
 /* foofest */
 
 .foo-image-container {
@@ -249,9 +238,11 @@ svg {
 }
 
 .foo-title {
-  font-family: "FiveSerifItalic";
+  font-family: "Lora", serif;
   font-size: 52px;
   margin: 0;
+  font-style: italic;
+  font-weight: 300;
 }
 
 /* old stuff */
@@ -406,7 +397,7 @@ figcaption {
   }
 
   .cards-container {
-    margin-top: 16vh;
+    padding-top: 16vh;
     flex-direction: column-reverse;
     width: 100%;
   }
