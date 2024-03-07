@@ -18,6 +18,7 @@ body {
 
 .light {
   color: white;
+  font-size: 28px;
 }
 
 .dark {
@@ -249,6 +250,8 @@ svg {
 
 #programs-container {
   display: flex;
+  flex-wrap: wrap;
+
   gap: 3rem;
 }
 
@@ -374,21 +377,21 @@ figcaption {
 
 @media only screen and (max-width: 550px) {
   p {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 26px;
   }
 
   .content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 75%;
+    height: 85%;
     padding: 1.8rem;
   }
   .logo {
     position: absolute;
     top: 5%;
-    left: 43%;
+    left: 8vw;
     z-index: 2;
   }
 
@@ -397,14 +400,14 @@ figcaption {
   }
 
   body {
-    display: flex;
     width: 100%;
   }
 
   .cards-container {
-    padding-top: 16vh;
+    margin-top: 8rem;
     flex-direction: column-reverse;
     width: 100%;
+    height: auto;
   }
 
   .card {
