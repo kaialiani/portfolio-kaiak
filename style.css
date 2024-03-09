@@ -83,6 +83,7 @@ h2 {
   gap: 1rem;
   flex-direction: row-reverse;
   justify-content: center;
+  padding-bottom: 6rem;
 }
 
 .last-card {
@@ -246,6 +247,20 @@ svg {
   font-weight: 300;
 }
 
+.otw {
+  transition: none;
+  transform: none;
+}
+
+.otw:hover {
+  transition: none;
+  transform: none;
+}
+
+.otw img {
+  box-shadow: none;
+}
+
 /* old stuff */
 
 #programs-container {
@@ -344,7 +359,7 @@ figcaption {
 @media only screen and (min-width: 550px) and (max-width: 1024px) {
   /* Styles specific to mobile screens */
   .cards-container {
-    width: 90%;
+    width: 90vw;
   }
 
   .card img {
@@ -391,7 +406,7 @@ figcaption {
   .logo {
     position: absolute;
     top: 5%;
-    left: 8vw;
+    left: 6vw;
     z-index: 2;
   }
 
@@ -406,13 +421,13 @@ figcaption {
   .cards-container {
     margin-top: 10rem;
     flex-direction: column-reverse;
-    width: 100%;
+    width: 90vw;
     height: auto;
   }
 
   .card {
     height: 16rem;
-    width: 90%;
+    width: 100%;
     border-radius: 20px;
     transition: none;
     outline-offset: -10px;
@@ -437,9 +452,16 @@ figcaption {
     outline: 2px solid rgb(255, 255, 255);
   }
 
-  .edc {
-    background-color: #232050;
-    outline: 2px solid rgb(255, 255, 255);
+  .otw {
+    background-color: #cecece3f;
+    outline: 2px solid #cecece;
+    outline-style: dashed;
+  }
+
+  .otw-text {
+    color: #c6c6c6;
+    font-weight: 300;
+    font-size: 70px;
   }
 
   .card:hover {
@@ -447,20 +469,9 @@ figcaption {
     transition: none;
   }
 
-  .last-card {
-    height: 16rem;
-    width: 100%;
-    background-color: #2f1c54;
-    border-radius: 20px;
-    box-shadow: -2px 4px 10px 0px rgba(53, 53, 53, 0.203);
-    transition: 0.4s ease-out;
-    position: relative;
-    left: 0;
-  }
-
   .project-description {
-    margin-top: 12rem;
-    width: 92vw;
+    margin-top: 10rem;
+    width: 90vw;
     display: flex;
     flex-direction: column;
     gap: 2vh;
@@ -484,6 +495,7 @@ figcaption {
   .capanna-image-container {
     flex-direction: column;
     width: 92vw;
+    gap: 2rem;
   }
 
   .capanna-image-container img {
@@ -497,7 +509,7 @@ figcaption {
 
   #programs-container {
     gap: 1.5rem;
-    margin-top: 0.4rem;
+    margin-top: 0.8rem;
   }
 
   #programs-container p {
@@ -519,14 +531,14 @@ figcaption {
   }
 
   .website-link p {
-    background-color: #ff4037;
-    padding-top: 0.4rem;
-    padding-bottom: 0.4rem;
+    background-color: #ff4137db;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
     padding-left: 0.8rem;
     padding-right: 0.8rem;
     border-radius: 100px;
     font-size: 16px;
-    margin-block-start: 0.5;
+    margin-block-start: 0.5em;
     margin-block-end: 0.5em;
   }
 
