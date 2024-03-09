@@ -83,25 +83,6 @@ h2 {
   gap: 1rem;
   flex-direction: row-reverse;
   justify-content: center;
-  padding-bottom: 6rem;
-}
-
-.last-card {
-  display: flex;
-  background-color: #2f1c54;
-  border-radius: 20px;
-  box-shadow: -2px 4px 10px 0px rgba(53, 53, 53, 0.203);
-  transition: 0.4s ease-out;
-  margin-right: -40px;
-  position: relative;
-  left: 80px;
-}
-
-.last-card img {
-  width: auto;
-  box-shadow: -2px 4px 10px 0px rgba(53, 53, 53, 0.203);
-  border-radius: 20px;
-  position: relative;
 }
 
 .card:hover {
@@ -150,14 +131,23 @@ svg {
   stroke: #262626;
 }
 
-.logo {
+.navbar {
   position: fixed;
+  display: flex;
+  flex-direction: column;
   left: 4vw;
-  top: 48vh;
+  top: 40vh;
+  align-items: center;
+  gap: 1rem;
 }
 
 .logo img {
   width: 4rem;
+}
+
+.info img {
+  width: 4rem;
+  border-radius: 100px;
 }
 
 .project-description {
@@ -356,8 +346,13 @@ figcaption {
   color: #0000008a;
 }
 
+.active img {
+  border: 3px solid #cecece;
+  border-radius: 100px;
+  padding: 5px;
+}
+
 @media only screen and (min-width: 550px) and (max-width: 1024px) {
-  /* Styles specific to mobile screens */
   .cards-container {
     width: 90vw;
   }
@@ -366,13 +361,11 @@ figcaption {
     border-radius: 10px;
   }
 
-  .logo {
-    position: fixed;
-    left: 3vw;
-    top: 48vh;
+  .logo img {
+    width: 2.8rem;
   }
 
-  .logo img {
+  .info img {
     width: 2.8rem;
   }
 }
@@ -382,6 +375,8 @@ figcaption {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     width: 70%;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
   }
   .card img {
     width: 100%;
@@ -391,6 +386,27 @@ figcaption {
 }
 
 @media only screen and (max-width: 550px) {
+  body {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: end;
+    width: 90vw;
+    justify-content: space-between;
+    left: 0;
+    top: 0;
+    position: relative;
+  }
+
   p {
     font-size: 16px;
     line-height: 26px;
@@ -404,22 +420,28 @@ figcaption {
     padding: 1.8rem;
   }
   .logo {
-    position: absolute;
-    top: 5%;
-    left: 6vw;
+    position: relative;
     z-index: 2;
+    left: 0;
+    top: 0;
+  }
+
+  .info {
+    position: relative;
+  }
+
+  .info img {
+    width: 3rem;
+    border-radius: 100px;
   }
 
   .logo img {
-    width: 5rem;
+    width: 3rem;
   }
-
-  body {
-    width: 100%;
+  .active img {
+    width: 4rem;
   }
-
   .cards-container {
-    margin-top: 10rem;
     flex-direction: column-reverse;
     width: 90vw;
     height: auto;
@@ -440,16 +462,19 @@ figcaption {
   .foo {
     background-color: #e1fe01;
     outline: 2px solid rgb(0, 0, 0);
+    box-shadow: 0px 0px 6px 3px rgba(102, 102, 102, 0.197);
   }
 
   .capanna {
     background-color: #e85935;
     outline: 2px solid rgb(255, 255, 255);
+    box-shadow: 0px 0px 6px 3px rgba(102, 102, 102, 0.197);
   }
 
   .klimakampen {
     background-color: #5da970;
     outline: 2px solid rgb(255, 255, 255);
+    box-shadow: 0px 0px 6px 3px rgba(102, 102, 102, 0.197);
   }
 
   .otw {
@@ -470,7 +495,7 @@ figcaption {
   }
 
   .project-description {
-    margin-top: 10rem;
+    margin-top: 1rem;
     width: 90vw;
     display: flex;
     flex-direction: column;
