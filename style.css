@@ -12,6 +12,22 @@ body {
   justify-content: center;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  font-size: 10px;
+  color: #a8a8a8;
+}
+
+.fade-in-container {
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
 .content {
   display: none;
 }
@@ -256,7 +272,6 @@ svg {
 #programs-container {
   display: flex;
   flex-wrap: wrap;
-
   gap: 3rem;
 }
 
@@ -310,7 +325,6 @@ svg {
   align-items: center;
   gap: 0.6rem;
   color: #f24e1d;
-
   cursor: pointer;
 }
 
@@ -319,17 +333,32 @@ svg {
   display: flex;
   align-items: center;
   gap: 1rem;
-
   cursor: pointer;
+  background-color: #fe5643ee;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 100px;
+  width: fit-content;
 }
 
+.mail {
+  background-color: #4d0a01;
+}
+
+.insta {
+  background-color: #0b66c2;
+}
+
+.github {
+  background-color: #333;
+}
 .website-link p {
-  background-color: #fe5643ee;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
-  padding-left: 0.8rem;
-  padding-right: 0.8rem;
-  border-radius: 100px;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  font-weight: 500;
+  color: white;
 }
 
 .website-link:hover {
@@ -338,7 +367,7 @@ svg {
 
 .links {
   display: flex;
-  flex-direction: column;
+  gap: 1rem;
 }
 
 figcaption {
@@ -350,6 +379,12 @@ figcaption {
   border: 3px solid #cecece;
   border-radius: 100px;
   padding: 5px;
+}
+
+.project-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 @media only screen and (min-width: 550px) and (max-width: 1024px) {
@@ -368,12 +403,20 @@ figcaption {
   .info img {
     width: 2.8rem;
   }
+
+  .capanna-image-container img {
+    height: 28rem;
+  }
+
+  .links {
+    flex-direction: column;
+  }
 }
 
 @media only screen and (min-width: 550px) and (max-width: 880px) {
   .cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: 1fr 1fr;
     width: 70%;
     padding-top: 2rem;
     padding-bottom: 4rem;
@@ -383,33 +426,65 @@ figcaption {
     border-radius: 22px;
     position: relative;
   }
+
+  .capanna-image-container img {
+    height: 26rem;
+  }
+
+  footer {
+    position: absolute;
+    bottom: -250px;
+    color: #a8a8a8;
+  }
+
+  .links {
+    flex-direction: column;
+  }
 }
 
 @media only screen and (max-width: 550px) {
+  .mail {
+    background-color: #4d0a01;
+  }
+
   body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding-top: 2rem;
+    padding-top: 1.5rem;
     padding-bottom: 2rem;
+  }
+  p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  footer {
+    position: relative;
+    bottom: 0;
+
+    color: #a8a8a8;
+  }
+
+  .links {
+    flex-direction: column;
+  }
+
+  footer p {
+    font-size: 12px;
   }
 
   .navbar {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    align-items: end;
+    align-items: start;
     width: 90vw;
     justify-content: space-between;
     left: 0;
     top: 0;
     position: relative;
-  }
-
-  p {
-    font-size: 16px;
-    line-height: 26px;
   }
 
   .content {
@@ -433,13 +508,16 @@ figcaption {
   .info img {
     width: 3rem;
     border-radius: 100px;
+    padding: 10px;
   }
 
   .logo img {
     width: 3rem;
+    padding-top: 10px;
   }
   .active img {
     width: 4rem;
+    padding: 4px;
   }
   .cards-container {
     flex-direction: column-reverse;
@@ -500,7 +578,7 @@ figcaption {
     display: flex;
     flex-direction: column;
     gap: 2vh;
-    margin-bottom: 10rem;
+    margin-bottom: 1rem;
   }
 
   .foo-image-container {
@@ -555,19 +633,38 @@ figcaption {
     width: 10vw;
   }
 
-  .website-link p {
-    background-color: #ff4137db;
-    padding-top: 0.3rem;
-    padding-bottom: 0.3rem;
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
-    border-radius: 100px;
+  .website-link {
     font-size: 16px;
-    margin-block-start: 0.5em;
-    margin-block-end: 0.5em;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    background-color: #fe5643ee;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 100px;
+    width: fit-content;
+  }
+  .insta {
+    background-color: #0b66c2;
+  }
+
+  .github {
+    background-color: #333;
+  }
+
+  .website-link p {
+    margin-block-start: 0.3em;
+    margin-block-end: 0.3em;
   }
 
   .last-pic {
     margin-right: 4rem;
+  }
+
+  .info-container {
+    gap: 1.5rem;
   }
 }
