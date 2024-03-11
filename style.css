@@ -180,6 +180,10 @@ svg {
   margin-right: 12rem;
 }
 
+.first-pic {
+  padding-left: 1rem;
+}
+
 /* foofest */
 
 .foo-image-container {
@@ -591,15 +595,16 @@ figcaption {
   .foo-image-container {
     display: flex;
     overflow-x: auto;
-    width: 92vw;
+    width: 94vw;
     gap: 3rem;
     -webkit-overflow-scrolling: touch;
     height: 100%;
     padding-left: 1.1rem;
+    margin-left: -5vw;
   }
 
   .foo-image-container img {
-    height: 32rem;
+    height: 28rem;
   }
 
   .capanna-image-container {
@@ -668,10 +673,18 @@ figcaption {
   }
 
   .last-pic {
-    margin-right: 4rem;
+    margin-right: 2rem;
+  }
+
+  .first-pic {
+    padding-left: 1rem;
   }
 
   .info-container {
     gap: 1.5rem;
+  }
+
+  figcaption {
+    font-size: 14px;
   }
 }
