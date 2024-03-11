@@ -595,7 +595,7 @@ figcaption {
   .foo-image-container {
     display: flex;
     overflow-x: auto;
-    width: 94.8vw;
+    width: 94.9vw;
     gap: 3rem;
     -webkit-overflow-scrolling: touch;
     height: 100%;
@@ -604,7 +604,7 @@ figcaption {
   }
 
   .foo-image-container img {
-    height: 30rem;
+    height: 29rem;
   }
 
   .capanna-image-container {
