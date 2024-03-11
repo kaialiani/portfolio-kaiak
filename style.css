@@ -12,13 +12,6 @@ body {
   justify-content: center;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  font-size: 10px;
-  color: #a8a8a8;
-}
-
 .fade-in-container {
   opacity: 0;
   transition: opacity 0.2s linear;
@@ -47,6 +40,14 @@ footer {
   margin-left: 0.5rem;
   font-style: italic;
   font-weight: 400;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 10px;
+  margin-block-start: 0em;
+  margin-block-end: 1em;
+  color: #888;
 }
 
 .capanna-font {
@@ -93,7 +94,7 @@ h2 {
 
 .cards-container {
   width: 100%;
-  height: 98vh;
+  height: 96vh;
   align-items: center;
   display: flex;
   gap: 1rem;
@@ -431,18 +432,31 @@ figcaption {
     height: 26rem;
   }
 
-  footer {
-    position: absolute;
-    bottom: -250px;
-    color: #a8a8a8;
-  }
-
   .links {
     flex-direction: column;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .copyright {
+    margin-block-start: 3em;
+    margin-block-end: 1em;
   }
 }
 
 @media only screen and (max-width: 550px) {
+  .copyright {
+    text-align: center;
+    font-size: 10px;
+    margin-block-start: 2em;
+    margin-block-end: 1em;
+    color: #888;
+  }
+
   .mail {
     background-color: #4d0a01;
   }
@@ -458,13 +472,6 @@ figcaption {
   p {
     font-size: 16px;
     line-height: 26px;
-  }
-
-  footer {
-    position: relative;
-    bottom: 0;
-
-    color: #a8a8a8;
   }
 
   .links {
