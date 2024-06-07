@@ -612,9 +612,12 @@ figcaption {
   }
 
   .capanna-image-container {
-    flex-direction: column;
-    width: 92vw;
+    display: flex;
+    width: 95vw;
     gap: 2rem;
+    overflow-x: auto;
+    padding-left: 1.1rem;
+    margin-left: -5vw;
   }
 
   .capanna-image-container img {
