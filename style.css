@@ -461,6 +461,10 @@ figcaption {
     color: #888;
   }
 
+  .back-arrow {
+    margin-bottom: 1rem;
+  }
+
   .mail {
     background-color: #4d0a01;
   }
@@ -619,10 +623,10 @@ figcaption {
   }
 
   .project-description > h1 > img {
-    width: 90vw;
+    width: 82vw;
   }
   .project-description > h1 {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   #programs-container {
