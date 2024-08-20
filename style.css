@@ -250,6 +250,17 @@ svg {
   height: 90vh;
 }
 
+.gioia-image-container {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+}
+
+.gioia-image-container img {
+  height: 40vh;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
 .foo-title {
   font-family: "Lora", serif;
   font-size: 52px;
@@ -413,6 +424,10 @@ figcaption {
     height: 28rem;
   }
 
+  .gioia-image-container img {
+    height: 20vh;
+  }
+
   .links {
     flex-direction: column;
   }
@@ -434,6 +449,10 @@ figcaption {
 
   .capanna-image-container img {
     height: 26rem;
+  }
+
+  .gioia-image-container img {
+    height: 20vh;
   }
 
   .links {
@@ -607,6 +626,16 @@ figcaption {
     margin-left: -5vw;
   }
 
+  .gioia-image-container {
+    display: flex;
+        width: 95vw;
+        gap: 2rem;
+        overflow-x: auto;
+        padding-left: 1.1rem;
+        margin-left: -5vw;
+    }
+  }
+
   .foo-image-container img {
     height: 29rem;
   }
@@ -623,6 +652,10 @@ figcaption {
   .capanna-image-container img {
     width: 92vw;
     height: auto;
+  }
+
+  .gioia-image-container img {
+    height: 20vh;
   }
 
   .project-description > h1 > img {
