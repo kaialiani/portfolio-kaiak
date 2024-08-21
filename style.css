@@ -628,6 +628,7 @@ figcaption {
 
   .gioia-image-container {
     display: flex;
+    flex-direction: column;
     width: 95vw;
     gap: 2rem;
     overflow-x: auto;
@@ -655,7 +656,7 @@ figcaption {
 }
 
 .gioia-image-container img {
-  height: 20vh;
+  height: 35vh;
 }
 
 .project-description > h1 > img {
