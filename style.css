@@ -589,6 +589,12 @@ figcaption {
     box-shadow: 0px 0px 6px 3px rgba(102, 102, 102, 0.197);
   }
 
+  .gioiabeauty {
+    background-color: #e7bfc4;
+    outline: 2px solid rgb(255, 255, 255);
+    box-shadow: 0px 0px 6px 3px rgba(102, 102, 102, 0.197);
+  }
+
   .otw {
     background-color: #cecece3f;
     outline: 2px solid #cecece;
